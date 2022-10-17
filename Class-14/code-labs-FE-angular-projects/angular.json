@@ -1,0 +1,289 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "C14-my-first-app": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/c14-my-first-app",
+      "sourceRoot": "projects/c14-my-first-app/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/c14-my-first-app",
+            "index": "projects/c14-my-first-app/src/index.html",
+            "main": "projects/c14-my-first-app/src/main.ts",
+            "polyfills": "projects/c14-my-first-app/src/polyfills.ts",
+            "tsConfig": "projects/c14-my-first-app/tsconfig.app.json",
+            "assets": [
+              "projects/c14-my-first-app/src/favicon.ico",
+              "projects/c14-my-first-app/src/assets"
+            ],
+            "styles": [
+              "projects/c14-my-first-app/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "projects/c14-my-first-app/src/environments/environment.ts",
+                  "with": "projects/c14-my-first-app/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "C14-my-first-app:build:production"
+            },
+            "development": {
+              "browserTarget": "C14-my-first-app:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "C14-my-first-app:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/c14-my-first-app/src/test.ts",
+            "polyfills": "projects/c14-my-first-app/src/polyfills.ts",
+            "tsConfig": "projects/c14-my-first-app/tsconfig.spec.json",
+            "karmaConfig": "projects/c14-my-first-app/karma.conf.js",
+            "assets": [
+              "projects/c14-my-first-app/src/favicon.ico",
+              "projects/c14-my-first-app/src/assets"
+            ],
+            "styles": [
+              "projects/c14-my-first-app/src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    },
+    "C14-manually-create-component": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/c14-manually-create-component",
+      "sourceRoot": "projects/c14-manually-create-component/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/c14-manually-create-component",
+            "index": "projects/c14-manually-create-component/src/index.html",
+            "main": "projects/c14-manually-create-component/src/main.ts",
+            "polyfills": "projects/c14-manually-create-component/src/polyfills.ts",
+            "tsConfig": "projects/c14-manually-create-component/tsconfig.app.json",
+            "assets": [
+              "projects/c14-manually-create-component/src/favicon.ico",
+              "projects/c14-manually-create-component/src/assets"
+            ],
+            "styles": [
+              "projects/c14-manually-create-component/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "projects/c14-manually-create-component/src/environments/environment.ts",
+                  "with": "projects/c14-manually-create-component/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "C14-manually-create-component:build:production"
+            },
+            "development": {
+              "browserTarget": "C14-manually-create-component:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "C14-manually-create-component:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/c14-manually-create-component/src/test.ts",
+            "polyfills": "projects/c14-manually-create-component/src/polyfills.ts",
+            "tsConfig": "projects/c14-manually-create-component/tsconfig.spec.json",
+            "karmaConfig": "projects/c14-manually-create-component/karma.conf.js",
+            "assets": [
+              "projects/c14-manually-create-component/src/favicon.ico",
+              "projects/c14-manually-create-component/src/assets"
+            ],
+            "styles": [
+              "projects/c14-manually-create-component/src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    },
+    "C14-generate-angular-component": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/c14-generate-angular-component",
+      "sourceRoot": "projects/c14-generate-angular-component/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/c14-generate-angular-component",
+            "index": "projects/c14-generate-angular-component/src/index.html",
+            "main": "projects/c14-generate-angular-component/src/main.ts",
+            "polyfills": "projects/c14-generate-angular-component/src/polyfills.ts",
+            "tsConfig": "projects/c14-generate-angular-component/tsconfig.app.json",
+            "assets": [
+              "projects/c14-generate-angular-component/src/favicon.ico",
+              "projects/c14-generate-angular-component/src/assets"
+            ],
+            "styles": [
+              "projects/c14-generate-angular-component/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "projects/c14-generate-angular-component/src/environments/environment.ts",
+                  "with": "projects/c14-generate-angular-component/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "C14-generate-angular-component:build:production"
+            },
+            "development": {
+              "browserTarget": "C14-generate-angular-component:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "C14-generate-angular-component:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/c14-generate-angular-component/src/test.ts",
+            "polyfills": "projects/c14-generate-angular-component/src/polyfills.ts",
+            "tsConfig": "projects/c14-generate-angular-component/tsconfig.spec.json",
+            "karmaConfig": "projects/c14-generate-angular-component/karma.conf.js",
+            "assets": [
+              "projects/c14-generate-angular-component/src/favicon.ico",
+              "projects/c14-generate-angular-component/src/assets"
+            ],
+            "styles": [
+              "projects/c14-generate-angular-component/src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    }
+  }
+}
