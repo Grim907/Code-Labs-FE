@@ -7,7 +7,7 @@ import { LoggingService } from '../logging.service'
   selector: 'app-new-account',
   templateUrl: './new-account.component.html',
   styleUrls: ['./new-account.component.css']
-  Providers: [LoggingService]
+  //Providers: [LoggingService]
 })
 export class NewAccountComponent {
 

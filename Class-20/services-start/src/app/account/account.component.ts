@@ -1,4 +1,4 @@
-import { Component, , Input, } from '@angular/core';
+import { Component,  Input, } from '@angular/core';
 import { AccountService } from '../account.service';
 import { LoggingService } from '../logging.service';
 
@@ -6,7 +6,7 @@ import { LoggingService } from '../logging.service';
   selector: 'app-account',
   templateUrl: './account.component.html',
   styleUrls: ['./account.component.css']
-  Providers: [LoggingService, ]
+  //Providers: [LoggingService, ]
 })
 export class AccountComponent {
   @Input() account: {name: string, status: string};
