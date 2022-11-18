@@ -10,7 +10,8 @@
     </div>
   </div>
   <div class="col-xs-12 col-sm-4">
-    <a routerLink="servers">Reload Page</a>
+    <button class="btn btn-primary">Reload Page</button>
+    <a routerLink="servers" (click)="onReload()">Reload Page</a>
     <app-edit-server></app-edit-server>
     <hr>
     <app-server></app-server>
