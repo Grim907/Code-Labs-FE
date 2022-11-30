@@ -30,6 +30,11 @@
           <p>*ngif="">Please enter a valid value!</p>
         </div>
         <div class="form-group">
+          <textarea
+          name="questionAnswer"
+          rows="3"
+          class="form-control"
+          [(ngModel)]="answer"></textarea>
           <label for="secret">Secret Questions</label>
           <select
           id="secret"
@@ -40,6 +45,7 @@
             <option value="teacher">Your first teacher?</option>
           </select>
         </div>
+        <p>Your reply: {{ answer }}</p>
         <button
         class="btn btn-primary"
         type="submit"
